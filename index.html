@@ -137,11 +137,11 @@
     <script>
         function coletarDados() {
             
+            let resultado = "";
             fetch(window.location.href + "representante.txt")
                 .then(response => response.text())
                 .then(text => {
-
-                    let resultado = "";
+                    resultado = text;
                     resultado = resultado.replaceAll('{{NOME}}', document.getElementById('nome').value);
                     resultado = resultado.replaceAll('{{CPF}}', document.getElementById('cpf').value);
                     resultado = resultado.replaceAll('{{SEXO}}', document.querySelector('input[name="sexo"]:checked').value);
