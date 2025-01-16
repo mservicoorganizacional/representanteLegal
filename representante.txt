@@ -1,0 +1,30 @@
+DADOS DO REPRESENTANTE LEGAL
+
+
+Nome: {{NOME}}
+
+CPF: {{CPF}}
+
+Sexo: {{SEXO}}
+
+Data de Nascimento: {{DATA_NASCIMENTO}}
+
+Número de Identidade: {{NUM_IDENTIDADE}}
+
+UF Identidade: {{UF_IDENTIDADE}}
+
+Órgão Emissor: {{ORGAO_EMISSOR}}
+
+Estado Civil: {{ESTADO_CIVIL}}
+
+Regime de Bens: {{REGIME_BENS}}
+
+Tipo Representante Legal: {{TIPO_REPRESENTANTE}}
+
+Profissão: {{PROFISSAO}}
+
+E-mail: {{EMAIL}}
+
+Telefone: {{TELEFONE}}
+
+Nacionalidade: {{NACIONALIDADE}}

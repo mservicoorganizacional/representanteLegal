@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <form>
+        <div class="container">
+            <div class="row" style="margin-left: 20px; margin-right: 20px;">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- Nome -->
+                            <label for="nome">Nome:</label><br>
+                            <input type="text" id="nome" name="nome" required><br><br>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <!-- CPF -->
+                        <label for="cpf">CPF:</label><br>
+                        <input type="text" id="cpf" name="cpf" required><br><br>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Sexo -->
+                        <label>Sexo:</label><br>
+                        <input type="radio" id="masculino" name="sexo" value="Masculino">
+                        <label for="masculino">Masculino</label><br>
+                        <input type="radio" id="feminino" name="sexo" value="Feminino" checked>
+                        <label for="feminino">Feminino</label><br><br><br>
+                        
+                        <!-- UF Identidade -->
+                        <label for="ufIdentidade">UF Identidade:</label><br>
+                        <select id="ufIdentidade" name="ufIdentidade" required>
+                            <option value="">Selecione...</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select><br><br>
+                        
+                        <!-- Regime de Bens -->
+                        <label for="regimeBens">Regime de Bens:</label><br>
+                        <select id="regimeBens" name="regimeBens">
+                            <option value="">Selecione...</option>
+                            <option value="comunhao">Comunhão de Bens</option>
+                            <option value="separacao">Separação de Bens</option>
+                        </select><br><br>
+                        
+                        <!-- Tipo Representante Legal -->
+                        <label for="tipoRepresentante">Tipo Representante Legal:</label><br>
+                        <select id="tipoRepresentante" name="tipoRepresentante">
+                            <option value="representanteLegal">Representante Legal</option>
+                        </select><br><br>
+                        
+                        <!-- E-mail -->
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Data de Nascimento -->
+                        <label for="dataNascimento">Data de Nascimento:</label><br>
+                        <input type="date" id="dataNascimento" name="dataNascimento" required><br><br>
+                        
+                        <!-- Órgão Emissor -->
+                        <label for="orgaoEmissor">Órgão Emissor:</label><br>
+                        <input type="text" id="orgaoEmissor" name="orgaoEmissor"><br><br>
+                        
+                        <!-- Profissão -->
+                        <label for="profissao">Profissão:</label><br>
+                        <input type="text" id="profissao" name="profissao"><br><br>
+                        
+                        <!-- Telefone -->
+                        <label for="telefone">Telefone:</label><br>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 0000-0000"><br><br>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Número de Identidade -->
+                        <label for="numIdentidade">Número de Identidade:</label><br>
+                        <input type="text" id="numIdentidade" name="numIdentidade" required><br><br>
+                        
+                        <!-- Estado Civil -->
+                        <label for="estadoCivil">Estado Civil:</label><br>
+                        <select id="estadoCivil" name="estadoCivil" required>
+                            <option value="">Selecione...</option>
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                            <option value="divorciado">Divorciado(a)</option>
+                            <option value="viuvo">Viúvo(a)</option>
+                        </select><br><br>
+                        
+                        <!-- Nacionalidade -->
+                        <label for="nacionalidade">Nacionalidade:</label><br>
+                        <select id="nacionalidade" name="nacionalidade" required>
+                            <option value="">Selecione...</option>
+                            <option value="brasileira">Brasileira</option>
+                            <option value="estrangeira">Estrangeira</option>
+                        </select><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Botão de Enviar -->
+            <button type="submit" onclick="coletarDados()">Enviar</button>
+        </div>
+    </form>
+    <script>
+        function coletarDados() {
+            let contratoFinal = "";
+            
+            fetch(window.location.href + "representante.txt")
+                .then(response => response.text())
+                .then(text => {
+
+                    let resultado = "";
+                    resultado = resultado.replaceAll('{{NOME}}', document.getElementById('nome').value);
+                    resultado = resultado.replaceAll('{{CPF}}', document.getElementById('cpf').value);
+                    resultado = resultado.replaceAll('{{SEXO}}', document.querySelector('input[name="sexo"]:checked').value);
+                    resultado = resultado.replaceAll('{{DATA_NASCIMENTO}}', document.getElementById('dataNascimento').value);
+                    resultado = resultado.replaceAll('{{NUM_IDENTIDADE}}', document.getElementById('numIdentidade').value);
+                    resultado = resultado.replaceAll('{{UF_IDENTIDADE}}', document.getElementById('ufIdentidade').value);
+                    resultado = resultado.replaceAll('{{ORGAO_EMISSOR}}', document.getElementById('orgaoEmissor').value);
+                    resultado = resultado.replaceAll('{{ESTADO_CIVIL}}', document.getElementById('estadoCivil').value);
+                    resultado = resultado.replaceAll('{{REGIME_BENS}}', document.getElementById('regimeBens').value);
+                    resultado = resultado.replaceAll('{{TIPO_REPRESENTANTE}}', document.getElementById('tipoRepresentante').value);
+                    resultado = resultado.replaceAll('{{PROFISSAO}}', document.getElementById('profissao').value);
+                    resultado = resultado.replaceAll('{{EMAIL}}', document.getElementById('email').value);
+                    resultado = resultado.replaceAll('{{TELEFONE}}', document.getElementById('telefone').value);
+                    resultado = resultado.replaceAll('{{NACIONALIDADE}}', document.getElementById('nacionalidade').value);
+
+                    var contratoPartes = contratoFinal.split('\n\n');
+                    const { jsPDF } = window.jspdf;
+                    const doc = new jsPDF();
+                    
+                    var size = 20;
+                    const fontSize = 12; // Tamanho da fonte em pontos
+                    const fatorConversao = 0.3528; // 1 ponto ≈ 0.3528 mm
+                    const alturaLinha = fontSize * fatorConversao;
+                    var alturaTexto = 0; 
+                    var linhas;
+                    
+                    doc.setFont("Helvetica", "normal");
+                    doc.setFontSize(fontSize);
+                    
+                    contratoPartes.forEach((item, index)=>{
+                        linhas = doc.splitTextToSize(item, 170);
+                        alturaTexto = linhas.length * alturaLinha;
+                        
+                        if(size + alturaTexto >= 297){
+                            doc.addPage();
+                            size = 20;
+                        }
+                        doc.text(item, 20, size, { maxWidth: 170 });
+                        size += alturaTexto + fatorConversao * fontSize * 2;
+                    })
+                    doc.save("dados_representante.pdf");
+            });
+        }
+        </script>
+        </body>
+        </html>
