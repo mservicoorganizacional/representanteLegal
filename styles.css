@@ -5,14 +5,15 @@ body {
     height: 100vh;         /* Altura da viewport */
     margin: 0;
 }
-.container {
-    width: 80%;           /* Define a largura da div */
-    padding: 20px;         /* Espaçamento interno (padding) */
-    background-color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 
 input:not([type="radio"]),select {
     width: 100%; /* O input ocupará 100% da largura do elemento pai */
     box-sizing: border-box; /* Inclui padding e borda dentro da largura total */
+}
+
+.ampliado {
+    width: 100%; /* O textarea preencherá 100% da largura do contêiner */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    height: 150px; /* Define uma altura fixa */
 }
