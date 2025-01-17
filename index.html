@@ -403,7 +403,6 @@
                     const { jsPDF } = window.jspdf;
                     const doc = new jsPDF();
                     
-                    var size = 20;
                     const fontSize = 12; // Tamanho da fonte em pontos
                     const fatorConversao = 0.3528; // 1 ponto ≈ 0.3528 mm
                     const alturaLinha = fontSize * fatorConversao;
@@ -413,6 +412,10 @@
                     doc.setFont("Helvetica", "normal");
                     doc.setFontSize(fontSize);
                     var aux;
+                    
+                    doc.addImage("./logo.png", "PNG", 10, 10, 50, 50)
+                    var size = 70;
+
                     contratoPartes.forEach((item, index)=>{
                         doc.setFont("Helvetica", "bold");
                         aux = item;
