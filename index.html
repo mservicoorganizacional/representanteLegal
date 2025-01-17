@@ -6,6 +6,7 @@
     <title>Formulário</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/justify/1.0.0/justify.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -17,7 +18,7 @@
                     <div class="row" style="margin-left: 20px; margin-right: 20px; justify-content: center;">
                         <div class="col-md-6" style="display: grid;">
                             <img src="./logo.png" alt="Exemplo de imagem"><br>
-                            <img src="./cidadeRes.jpeg" alt="Exemplo de imagem" style="height: 80%;"><br>
+                            <img src="./cidadeRes.jpg" alt="Exemplo de imagem" style="height: 100%;"><br>
 
                             <label for="nomeEmpresa">Nome da Empresa:</label>
                             <input type="text" id="nomeEmpresa" name="nomeEmpresa" required><br><br>
@@ -63,13 +64,12 @@
                     <div class="row">
                         <div class="col-md-12" style="display: grid;justify-content: center;">
                             <div class="tab-container">
-                                <div class="tab active" onclick="openTab(event, 'tab1')">Representante legal</div>
-                                <div class="tab" onclick="openTab(event, 'tab2')">Representante legalmente aceito</div>
+                                <div class="tab active" onclick="openTab(event, 'tab1')">Informações do representante legal</div>
+                                <div class="tab" onclick="openTab(event, 'tab2')">Informações do representante legalmente indicado</div>
                             </div>
                         </div>
                     </div>
                     <div id="tab1" class="tab-content active">
-                        <div style="justify-self: center;"><b>Informações do representante legal:</b></div>
                         <div class="row" style="margin-left: 20px; margin-right: 20px;">
                             <div class="col">
                                 <div class="row">
@@ -200,13 +200,12 @@
                         </div>
                     </div>
                     <div id="tab2" class="tab-content" style="background-color: rgb(123, 255, 194);">
-                        <div style="justify-self: center;"><b>Informações do representante legalmente indicado:</b></div>
                         <div class="row" style="margin-left: 20px; margin-right: 20px;">
                             <div class="col">
                                 <div class="row">
                                     <div class="col-md-8">
                                         <!-- Nome -->
-                                        <label for="nome">Nome do representante legal (idem sócio admnistrativo do CNPJ):</label><br>
+                                        <label for="nome">Nome do representante legalmente indicado:</label><br>
                                         <input type="text" id="nomeAceito" name="nome" required><br><br>
                                     </div>
                                     <div class="col-md-4">
@@ -341,9 +340,9 @@
                     <input type="button" style="width: 100%; height: 50px; background-color: #2f2f2fa8" onclick="coletarDados()" value="Gerar PDF" >
                 </div>
                 <div class="col-md-4">
-                    <h5 style="color: rgb(164, 0, 0);"> (Após gerado, assinar no GOV e enviar para gestcontratos@asasesg.org )</h5>
+                    <h5 style="color: rgb(164, 0, 0); text-align: center;"> (Após gerado, assinar no GOV e enviar para gestcontratos@asasesg.org )</h5>
                 </div>
-                <h6 style="text-align: justify; text-align-last: justify;">Este cadastramento é necessário para autorização legal dos profissionais que terão acesso às informações confidências da área de desenvolvimento dos projetos e permite a assinatura de termos de responsabilidade para os mesmos fins, dando liberdade ao mesmo de análise e deliberações quanto ao teor das contratações a seguir.</h6>
+                <h5 style="text-align: justify;">Este cadastramento é necessário para autorização legal dos profissionais que terão acesso às informações confidências da área de desenvolvimento dos projetos e permite a assinatura de termos de responsabilidade para os mesmos fins, dando liberdade ao mesmo de análise e deliberações quanto ao teor das contratações a seguir.</h6>
             </div>
         </div>
     </form>
