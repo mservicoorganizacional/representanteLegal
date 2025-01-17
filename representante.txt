@@ -38,6 +38,8 @@ UF Identidade: {{UF_IDENTIDADE}}
 
 Órgão Emissor: {{ORGAO_EMISSOR}}
 
+Data Emissão: {{DATAEMISSÃO}}
+
 Estado Civil: {{ESTADO_CIVIL}}
 
 Regime de Bens: {{REGIME_BENS}}
@@ -50,4 +52,44 @@ E-mail: {{EMAIL}}
 
 Telefone: {{TELEFONE}}
 
+Whatsapp: {{WPP}}
+
 Nacionalidade: {{NACIONALIDADE}}
+
+
+
+DADOS DO REPRESENTANTE LEGALMENTE ACEITO
+
+
+
+Nome: {{NOMEACEITO}}
+
+CPF: {{CPFACEITO}}
+
+Sexo: {{SEXOACEITO}}
+
+Data de Nascimento: {{DATA_NASCIMENTOACEITO}}
+
+Número de Identidade: {{NUM_IDENTIDADEACEITO}}
+
+UF Identidade: {{UF_IDENTIDADEACEITO}}
+
+Órgão Emissor: {{ORGAO_EMISSORACEITO}}
+
+Data Emissão: {{DATAEMISSÃOACEITO}}
+
+Estado Civil: {{ESTADO_CIVILACEITO}}
+
+Regime de Bens: {{REGIME_BENSACEITO}}
+
+Tipo Representante Legal: {{TIPO_REPRESENTANTEACEITO}}
+
+Profissão: {{PROFISSAOACEITO}}
+
+E-mail: {{EMAILACEITO}}
+
+Telefone: {{TELEFONEACEITO}}
+
+Whatsapp: {{WPPACEITO}}
+
+Nacionalidade: {{NACIONALIDADEACEITO}}

@@ -6,6 +6,9 @@ body {
     margin: 0;
 }
 
+.wide-container{
+    height: 100vh;
+}
 
 input:not([type="radio"]),select {
     width: 100%; /* O input ocupará 100% da largura do elemento pai */
@@ -16,4 +19,41 @@ input:not([type="radio"]),select {
     width: 100%; /* O textarea preencherá 100% da largura do contêiner */
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
     height: 150px; /* Define uma altura fixa */
+}
+
+
+/* Estilo das abas */
+.tab-container {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: white;
+    font-weight: bold;
+}
+
+/* Estilo do conteúdo */
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.tab-content.active {
+    display: block;
 }
