@@ -4,6 +4,7 @@ body {
     align-items: center;   /* Centraliza verticalmente */
     height: 100vh;         /* Altura da viewport */
     margin: 0;
+    background-color: gray;
 }
 
 .wide-container{
@@ -42,7 +43,7 @@ input:not([type="radio"]),select {
 }
 
 .tab.active {
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(202, 186, 255);
     font-weight: bold;
 }
 
