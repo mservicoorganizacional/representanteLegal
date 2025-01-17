@@ -33,7 +33,7 @@ input:not([type="radio"]),select {
     cursor: pointer;
     border: 1px solid #ccc;
     border-bottom: none;
-    background-color: #f1f1f1;
+    background-color: rgb(128, 128, 128);
     transition: background-color 0.3s;
 }
 
@@ -42,7 +42,7 @@ input:not([type="radio"]),select {
 }
 
 .tab.active {
-    background-color: white;
+    background-color: rgb(128, 128, 128);
     font-weight: bold;
 }
 
@@ -51,7 +51,7 @@ input:not([type="radio"]),select {
     display: none;
     padding: 20px;
     border: 1px solid #ccc;
-    background-color: white;
+    background-color: rgb(191, 189, 189);
 }
 
 .tab-content.active {
