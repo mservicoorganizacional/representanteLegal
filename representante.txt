@@ -1,5 +1,7 @@
 DADOS DA EMPRESA
 
+
+
 Nome da Empresa : {{nomeEmpresa}}
 
 CNPJ : {{cnpj}}
@@ -17,7 +19,9 @@ Adequações em andamento (enquadramentos, mudança de endereço, abertura de un
 Data prazo para adequação documental : {{dataPrazo}}
 
 
+
 DADOS DO REPRESENTANTE LEGAL
+
 
 
 Nome: {{NOME}}
