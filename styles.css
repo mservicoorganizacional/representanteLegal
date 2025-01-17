@@ -26,6 +26,7 @@ input:not([type="radio"]),select {
 /* Estilo das abas */
 .tab-container {
     display: flex;
+    height: 100%;
     border-bottom: 2px solid #ccc;
 }
 
@@ -36,6 +37,9 @@ input:not([type="radio"]),select {
     border-bottom: none;
     background-color: rgb(128, 128, 128);
     transition: background-color 0.3s;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .tab:hover {
@@ -45,6 +49,7 @@ input:not([type="radio"]),select {
 .tab.active {
     background-color: rgb(202, 186, 255);
     font-weight: bold;
+    text-align: center;
 }
 
 /* Estilo do conteúdo */
