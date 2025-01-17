@@ -19,7 +19,7 @@ input:not([type="radio"]),select {
 .ampliado {
     width: 100%; /* O textarea preencherá 100% da largura do contêiner */
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
-    height: 150px; /* Define uma altura fixa */
+    height: 100px; /* Define uma altura fixa */
 }
 
 

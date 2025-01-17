@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" style="background-color: gray;">
+<html lang="pt-BR" style="background-color: rgb(102, 174, 102);">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +10,9 @@
 </head>
 <body>
     <form>
-        <div class="wide-container" style="background-color: rgb(128, 128, 128);">
+        <div class="wide-container" style="background-color:rgb(102, 174, 102);">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <img src="./logo.png" alt="Exemplo de imagem" width="75">
-                        </div>
-                        <div class="col-md-10">
-                            <h1 style="text-align: center;">Dados do Representante Legal</h1>
-                        </div>
-                    </div>
 
                 </div>
                 <div class="col-md-6">
@@ -34,6 +26,8 @@
                 <div class="col-md-6">
                     <div class="row" style="margin-left: 20px; margin-right: 20px;">
                         <div class="col-md-6">
+                            <img src="./logo.png" style="display: block; margin: 0 auto;" alt="Exemplo de imagem" width="150"><br>
+
                             <label for="nomeEmpresa">Nome da Empresa:</label>
                             <input type="text" id="nomeEmpresa" name="nomeEmpresa" required><br><br>
 
@@ -48,12 +42,17 @@
                             <!-- Número de Comunicação -->
                             <label for="numeroComunicacao">Número de Comunicação:</label>
                             <input type="text" id="numeroComunicacao" name="numeroComunicacao" required><br><br>
-                            <!-- Serviços e Produtos Permitidos -->
-                            <label for="servicosProdutos">Serviços e Produtos Permitidos:</label>
-                            <textarea class="ampliado" id="servicosProdutos" name="servicosProdutos" required></textarea><br><br>
+                            
+                            <!-- Data Prazo para Adequação Documental -->
+                            <label for="dataPrazo">Data prazo para adequação documental:</label>
+                            <select id="dataPrazo" name="dataPrazo">
+                                <option value="30 Dias">30 Dias</option>
+                                <option value="60 Dias">60 Dias</option>
+                                <option value="90 Dias">90 Dias</option>
+                            </select><br><br>
+                            
                         </div>
                         <div class="col-md-6">
-
                             <!-- Lista de Atividades (Fornecimentos) -->
                             <label for="listaAtividades">Lista de Atividades (Fornecimentos) que se propõe a realizar negociadas junto à ASST:</label>
                             <textarea class="ampliado" id="listaAtividades" name="listaAtividades" required></textarea><br><br>
@@ -62,13 +61,9 @@
                             <label for="adequacoes">Adequações em andamento (enquadramentos, mudança de endereço, abertura de unidade) especifique:</label>
                             <textarea class="ampliado" id="adequacoes" name="adequacoes" required></textarea><br><br>
 
-                            <!-- Data Prazo para Adequação Documental -->
-                            <label for="dataPrazo">Data prazo para adequação documental:</label>
-                            <select id="dataPrazo" name="dataPrazo">
-                                <option value="30 Dias">30 Dias</option>
-                                <option value="60 Dias">60 Dias</option>
-                                <option value="90 Dias">90 Dias</option>
-                            </select><br><br>
+                            <!-- Serviços e Produtos Permitidos -->
+                            <label for="servicosProdutos">Serviços e Produtos Permitidos:</label>
+                            <textarea class="ampliado" id="servicosProdutos" name="servicosProdutos" required></textarea><br><br>
                         </div>
                     </div>
                 </div>
@@ -460,6 +455,6 @@
                     doc.save("dados_representante.pdf");
             });
         }
-        </script>
-        </body>
-        </html>
+    </script>
+</body>
+</html>
